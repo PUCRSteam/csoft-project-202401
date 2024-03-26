@@ -1,6 +1,6 @@
-O conjunto de casos de uso para a plataforma de compra e venda de ingressos descreve as interações principais que os usuários (compradores, vendedores, e administradores) têm com o sistema. Cada caso de uso detalha um processo específico, fornecendo clareza sobre o funcionamento pretendido da plataforma.
+### Casos de Uso
 
-### Casos de Uso Principais
+O conjunto de casos de uso para a plataforma de compra e venda de ingressos descreve as interações principais que os usuários (compradores, vendedores, e administradores) têm com o sistema. Cada caso de uso detalha um processo específico, fornecendo clareza sobre o funcionamento pretendido da plataforma.
 
 #### 1. Compra de Ingresso
 - **Ator Primário:** Comprador

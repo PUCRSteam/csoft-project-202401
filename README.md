@@ -4,82 +4,25 @@
 
 Esta documentação detalha o design e as funcionalidades de uma plataforma online para a compra e venda de ingressos de eventos, como festas, shows e teatros. A plataforma suporta a revenda de tickets por usuários, transferência segura de valores, autenticação de tickets, e integração com sistemas oficiais de eventos para a validação de ingressos.
 
-## Funcionalidades Principais
+## Ciclo de Vida do Desenvolvimento
 
-### 1. Cadastro e Gerenciamento de Usuários
+A construção de um sistema de software desde a idealização até a implementação e manutenção envolve várias etapas. Estas etapas, conhecidas como ciclo de vida do desenvolvimento de software, são fundamentais para garantir que o sistema atenda aos requisitos e necessidades dos usuários finais. Aqui está uma visão geral das etapas típicas:
 
-- **Usuários podem se registrar** na plataforma fornecendo informações básicas e preferências de notificação.
-- **Autenticação e autorização** por meio de um provedor de identidade externo, como AWS Cognito.
-- **Gerenciamento de preferências** de notificação para e-mails e push notifications.
+1. **Concepção e Planejamento**: Esta é a fase inicial, onde a necessidade de um novo sistema é identificada. Inclui a definição do problema, a viabilidade do projeto, a análise de custos-benefícios, e a formação da equipe de projeto.
 
-### 2. Multitenancy
+2. **Análise de Requisitos**: Durante esta etapa, os desenvolvedores, juntamente com os stakeholders, determinam as especificações detalhadas do software. Isso inclui coletar requisitos do usuário, entender as necessidades do negócio, e documentar tudo de forma clara.
+   1. [Casos de Uso](UseCases.md)
+3. **Projeto de Sistema e Software**: Aqui, a equipe define a arquitetura do sistema, escolhe tecnologias, e cria um plano detalhado para a implementação. Isso pode incluir a modelagem de dados, o projeto da interface do usuário, e a definição dos padrões de codificação.
+   1. [Modelo de Dados](DataModel.md)
+   
+4. **Implementação e Codificação**: Esta é a fase de construção real, onde os desenvolvedores escrevem o código do software com base no projeto definido anteriormente. A implementação deve seguir as melhores práticas de codificação e padrões de segurança.
 
-- Suporte a **múltiplos tenants** em uma única base de dados, permitindo que diferentes organizações ou grupos gerenciem seus eventos e ingressos separadamente.
+5. **Testes**: Após a implementação, o software passa por uma série rigorosa de testes para garantir que está funcionando conforme esperado. Isso inclui testes de unidade, testes de integração, testes de sistema, e testes de aceitação do usuário. O objetivo é identificar e corrigir bugs ou problemas de desempenho.
 
-### 3. Ingressos e Eventos
+6. **Implantação**: Uma vez que o software é testado e aprovado, ele é implantado para o ambiente de produção. Isso pode envolver a migração de dados, a configuração de servidores, e o treinamento de usuários finais.
 
-- **Cadastro de eventos** realizado pela administração da plataforma para garantir consistência e prevenir fraudes.
-- **Revenda de ingressos** permitida para usuários, vinculando os tickets a eventos existentes no sistema.
-- **Gestão de inventário de tickets** para evitar a venda duplicada e garantir a autenticidade.
-- **Autenticação de tickets** na entrada do evento com integração a sistemas oficiais de eventos.
+7. **Manutenção e Suporte**: Após a implantação, o software precisa de manutenção contínua para corrigir bugs, melhorar a funcionalidade, e atualizar seguranças. O suporte contínuo também é essencial para ajudar os usuários com quaisquer problemas ou dúvidas.
 
-### 4. Sistema Antifraude
+8. **Avaliação e Evolução**: Finalmente, o software deve ser regularmente avaliado em relação às necessidades do negócio e do usuário. Isso pode levar a atualizações significativas ou ao desenvolvimento de novas versões do software.
 
-- **Verificação e validação** de usuários e transações.
-- **Monitoramento de transações** e análise de comportamento para detectar atividades suspeitas.
-- **Geração e manutenção de códigos únicos** para cada ticket.
-- **Comunicação e educação dos usuários** sobre práticas seguras.
-
-### 5. Notificações
-
-- **Envio de notificações** por e-mail e push notification via Firebase.
-- **Gestão de preferências** de notificação pelos usuários.
-
-### 6. Pagamentos
-
-- Integração com **Stripe** para processamento seguro de pagamentos e transferências de valores entre usuários.
-
-## Modelagem de Dados
-
-### Entidades Principais
-
-- **Tenant**: Para suportar multitenancy, armazenando dados específicos de cada organização.
-- **Usuário**: Dados dos usuários, incluindo preferências de notificação e configurações de privacidade.
-- **Evento**: Informações sobre eventos cadastrados pela administração da plataforma.
-- **Ticket**: Detalhes sobre ingressos disponíveis para compra ou revenda.
-- **Transação**: Registro de compras e vendas de tickets na plataforma.
-- **Preferências de Notificação e Configurações de Privacidade**: Preferências dos usuários sobre recebimento de notificações e gestão da privacidade de seus dados.
-
-### Relacionamentos
-
-- Tickets estão associados a eventos e a usuários (como vendedor e/ou comprador).
-- Transações vinculam compradores a tickets específicos.
-- Preferências de notificação e configurações de privacidade são personalizadas para cada usuário.
-
-## Segurança e Conformidade
-
-- Implementação de **autenticação forte** e **criptografia de dados**.
-- Conformidade com **GDPR**, **LGPD**, e outras leis de proteção de dados.
-- **Sistema antifraude** para prevenção e detecção de atividades suspeitas.
-
-## Integração e Parcerias
-
-- **Parcerias com organizadores de eventos** para cadastro e gestão de eventos.
-- **Integração com sistemas oficiais de eventos** para autenticação de ingressos.
-
-## Administração da Plataforma
-
-- **Painel administrativo** para gestão de usuários, eventos, tickets e transações.
-- **Ferramentas de suporte e atendimento ao cliente** para resolução rápida de problemas.
-
-## Implementação Tecnológica
-
-- Uso de **AWS Cognito** para autenticação e autorização.
-- **Firebase** para envio de push notifications.
-- **Amazon SQS** para gerenciamento de filas de notificações.
-- **Amazon SES** para envio de e-mails.
-- **Stripe** para processamento de pagamentos.
-
-## Conclusão
-
-Esta plataforma representa uma solução abrangente para a compra e venda de ingressos de eventos, enfatizando segurança, confiabilidade e uma ótima
+Cada uma dessas etapas é crucial para o sucesso do desenvolvimento de software e exige uma abordagem cuidadosa e metodológica. Dependendo do método de desenvolvimento escolhido (como ágil, cascata, ou DevOps), a ordem ou a execução dessas etapas pode variar.

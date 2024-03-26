@@ -67,3 +67,25 @@ Para a etapa de **Projeto de Sistema e Software** da plataforma de compra e vend
 - **Ticket** ↔ **Transação**: Um-para-um.
 - **Usuário** ↔ **PreferênciasDeNotificação**: Um-para-um.
 - **Usuário** ↔ **Configurações de Privacidade**: Um-para-um.
+
+### Projeto de Sistema e Software
+
+Além do modelo de dados detalhado acima, a etapa de **Projeto de Sistema e Software** incluiria a criação de:
+
+#### Diagramas de Arquitetura
+
+Estes diagramas forneceriam uma visão geral de alto nível da infraestrutura de software e hardware necessária para suportar a plataforma, incluindo servidores, redes, e a interação entre diferentes serviços e componentes da aplicação.
+
+#### Modelos UML (Unified Modeling Language)
+
+- **Diagramas de Classe**: Representariam as entidades descritas no modelo de dados e suas relações, fornecendo uma visão detalhada da estrutura de dados da aplicação.
+- **Diagramas de Sequência**: Ilustrariam as interações entre os objetos do sistema para os principais processos, como compra e venda de ingressos, detalhando o fluxo de operações e a troca de mensagens.
+- **Diagramas de Atividade**: Descreveriam o fluxo de trabalho e os processos de negócio, como o processo de autenticação de tickets, destacando as ações realizadas por diferentes atores e sistemas.
+
+#### Especificações de Interface
+
+Detalhes sobre como os componentes do sistema interagem entre si e com os usuários, incluindo APIs para integração com sistemas de eventos e pagamento, e interfaces de usuário para as plataformas web e móvel.
+
+### Conclusão
+
+A documentação elaborada nas etapas de **Concepção e Planejamento**, **Análise de Requisitos**, e **Projeto de Sistema e Software** forma a base para o desenvolvimento bem-sucedido da plataforma de compra e venda de ingressos. Esses artefatos garantem que todos os envolvidos tenham uma compreensão clara dos objetivos do projeto, requisitos do sistema, e design arquitetônico, facilitando uma implementação eficaz e eficiente na próxima etapa de **Implementação e Codificação**.
