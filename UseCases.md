@@ -1,4 +1,4 @@
-### Casos de Uso
+### Casos de Uso para a Plataforma de Compra e Venda de Ingressos
 
 O conjunto de casos de uso para a plataforma de compra e venda de ingressos descreve as interações principais que os usuários (compradores, vendedores, e administradores) têm com o sistema. Cada caso de uso detalha um processo específico, fornecendo clareza sobre o funcionamento pretendido da plataforma.
 
@@ -57,3 +57,20 @@ O conjunto de casos de uso para a plataforma de compra e venda de ingressos desc
   2. Seleciona o ingresso e solicita reembolso.
   3. O sistema verifica as políticas de reembolso do evento.
   4. Se aplicável, o reembolso é processado e o usuário é notificado.
+
+#### 7. Envio de Avaliação do Vendedor
+- **Ator Primário:** Comprador
+- **Resumo:** Após a compra de um ingresso, o comprador envia uma avaliação sobre o vendedor.
+- **Fluxo Principal:**
+  1. Após a conclusão da transação, o comprador é incentivado a avaliar o vendedor.
+  2. O comprador acessa a plataforma, encontra a transação no histórico de compras e seleciona a opção para avaliar o vendedor.
+  3. Atribui uma nota e escreve um comentário sobre a experiência de compra.
+  4. A avaliação é submetida e fica disponível para consulta por outros usuários.
+
+#### 8. Visualização de Avaliações do Vendedor
+- **Ator Primário:** Comprador Potencial
+- **Resumo:** Compradores potenciais visualizam avaliações e notas de vendedores.
+- **Fluxo Principal:**
+  1. O comprador potencial acessa o perfil de um vendedor na plataforma.
+  2. Visualiza as avaliações e notas dadas por compradores anteriores.
+  3. Usa as informações para ajudar na decisão de compra.
