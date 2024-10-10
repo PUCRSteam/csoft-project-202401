@@ -15,8 +15,6 @@ Para a etapa de **Projeto de Sistema e Software** da plataforma de compra e vend
    - **TenantID** (FK): Identificador do tenant ao qual o usuário pertence.
    - **Nome**: Nome do usuário.
    - **Email**: E-mail do usuário.
-   - **FirebaseToken**: Token para push notifications via Firebase.
-   - **ConfiguraçõesDePrivacidadeID** (FK): Identificador para as configurações de privacidade do usuário.
 
 3. **Evento**
    - **EventoID** (PK): Identificador único do evento.
@@ -50,14 +48,6 @@ Para a etapa de **Projeto de Sistema e Software** da plataforma de compra e vend
    - **ReceberEmails**: Indica se o usuário deseja receber e-mails.
    - **ReceberPushNotifications**: Indica se o usuário deseja receber push notifications.
 
-7. **Configurações de Privacidade**
-   - **ConfiguraçõesDePrivacidadeID** (PK): Identificador único das configurações de privacidade.
-   - **UserID** (FK): Identificador do usuário ao qual as configurações pertencem.
-   - **PermitirCompartilhamentoDados**: Indica se o usuário permite o compartilhamento de seus dados.
-   - **VisibilidadePerfil**: Define a visibilidade do perfil do usuário.
-   - **HistóricoDeTransaçõesVisível**: Indica se o histórico de transações do usuário é visível.
-   - **ReceberComunicaçõesMarketing**: Indica se o usuário deseja receber comunicações de marketing.
-
 #### Relacionamentos
 
 - **Tenant** ↔ **Usuário**: Um-para-muitos.
@@ -66,4 +56,3 @@ Para a etapa de **Projeto de Sistema e Software** da plataforma de compra e vend
 - **Evento** ↔ **Ticket**: Um-para-muitos.
 - **Ticket** ↔ **Transação**: Um-para-um.
 - **Usuário** ↔ **PreferênciasDeNotificação**: Um-para-um.
-- **Usuário** ↔ **Configurações de Privacidade**: Um-para-um.
