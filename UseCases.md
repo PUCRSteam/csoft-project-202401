@@ -46,7 +46,7 @@ O conjunto de casos de uso para a plataforma de compra e venda de ingressos desc
 - **Fluxo Principal:**
   1. O usuário acessa as configurações de conta.
   2. Seleciona preferências de notificação.
-  3. Ajusta as configurações para receber notificações por e-mail e/ou push.
+  3. Habilita receber notificações por e-mail.
   4. Salva as alterações.
 
 #### 6. Reembolso de Ingresso
