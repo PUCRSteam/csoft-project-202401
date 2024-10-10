@@ -20,7 +20,7 @@ O conjunto de casos de uso para a plataforma de compra e venda de ingressos desc
   2. Insere informações sobre o ingresso, incluindo evento, preço e detalhes do assento.
   3. Submete o ingresso para a plataforma.
   4. Recebe notificação quando o ingresso é vendido.
-  5. Recebe o pagamento na sua conta da plataforma.
+  5. Recebe o pagamento na sua conta da plataforma (deve ser possível visualizar o saldo na conta).
 
 #### 3. Gerenciamento de Eventos (Administrador)
 - **Ator Primário:** Administrador
