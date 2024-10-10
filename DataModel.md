@@ -46,7 +46,6 @@ Para a etapa de **Projeto de Sistema e Software** da plataforma de compra e vend
    - **PreferênciasID** (PK): Identificador único das preferências de notificação.
    - **UserID** (FK): Identificador do usuário associado.
    - **ReceberEmails**: Indica se o usuário deseja receber e-mails.
-   - **ReceberPushNotifications**: Indica se o usuário deseja receber push notifications.
 
 #### Relacionamentos
 
